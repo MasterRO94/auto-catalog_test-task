@@ -1,4 +1,4 @@
-@extends('app')
+@extends('__laravel.app')
 
 @section('content')
 <div class="container">
