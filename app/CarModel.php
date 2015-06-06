@@ -9,7 +9,7 @@ class CarModel extends Model {
 
     public function mark()
     {
-        return $this->belongsTo('App\CarMark');
+        return $this->belongsTo('App\CarMark', 'car_mark_id');
     }
 
 

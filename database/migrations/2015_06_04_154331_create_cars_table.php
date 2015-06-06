@@ -16,15 +16,16 @@ class CreateCarsTable extends Migration {
 		{
             $table->increments('id');
 
-            $table->integer('mark_id')->unsigned();
-            $table->foreign('mark_id')->references('id')->on('car_marks');
+            /*$table->integer('car_mark_id')->unsigned();
+            $table->foreign('car_mark_id')->references('id')->on('car_marks');
 
-            $table->integer('model_id')->unsigned();
-            $table->foreign('model_id')->references('id')->on('car_models');
+            $table->integer('car_model_id')->unsigned();
+            $table->foreign('car_model_id')->references('id')->on('car_models');*/
 
-            $table->integer('options_id')->unsigned();
-            $table->foreign('options_id')->references('id')->on('car_options');
+            $table->integer('car_options_id')->unsigned();
+            $table->foreign('car_options_id')->references('id')->on('car_options');
 
+            $table->string('image')->default('no_image.png');
             $table->text('description')->nullable();
             $table->boolean('enable')->default(true);
             $table->timestamps();

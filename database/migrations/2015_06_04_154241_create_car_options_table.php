@@ -16,11 +16,13 @@ class CreateCarOptionsTable extends Migration {
 		{
             $table->increments('id');
 
-            $table->integer('model_id')->unsigned();
-            $table->foreign('model_id')->references('id')->on('car_models')->onDelete('cascade');
+            $table->integer('car_model_id')->unsigned();
+            $table->foreign('car_model_id')->references('id')->on('car_models')->onDelete('cascade');
 
             $table->string('title');
             $table->timestamps();
+
+            $table->unique(['id', 'title']);
 		});
 	}
 

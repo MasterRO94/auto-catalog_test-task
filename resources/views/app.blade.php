@@ -44,9 +44,9 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li @if(route('homepage') == route(Request::route()->getName())) class="active" @endif ><a href="{{ route('homepage') }}">Главная</a></li>
-                            <li @if(route('catalog') == route(Request::route()->getName())) class="active" @endif ><a href="{{ route('catalog') }}">Каталог</a></li>
-                            <li @if(route('about') == route(Request::route()->getName())) class="active" @endif ><a href="{{ route('about') }}">О Нас</a></li>
+                            <li @if('homepage' == Request::route()->getName()) class="active" @endif ><a href="{{ route('homepage') }}">Главная</a></li>
+                            <li @if('catalog' == Request::route()->getName() || 'mark' == Request::route()->getName() || 'model' == Request::route()->getName() ) class="active" @endif ><a href="{{ route('catalog') }}">Каталог</a></li>
+                            <li @if('about' == Request::route()->getName()) class="active" @endif ><a href="{{ route('about') }}">О Нас</a></li>
                          </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -56,8 +56,9 @@
     @show
 
 
-    @yield('content')
-
+    <section class="content panel panel-default clearfix">
+        @yield('content')
+    </section>
 
     @section('footer')
         <footer>
@@ -72,6 +73,8 @@
 <!-- Scripts -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<script src="{{ asset('/js/main.js') }}"></script>
 
 </body>
 </html>

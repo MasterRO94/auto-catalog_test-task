@@ -16,7 +16,11 @@ class CreateCarMarksTable extends Migration {
         {
             $table->increments('id');
             $table->string('title');
+            $table->string('slug');
             $table->timestamps();
+
+            $table->unique(['id', 'slug']);
+
         });
     }
 
@@ -27,7 +31,7 @@ class CreateCarMarksTable extends Migration {
      */
     public function down()
     {
-        Schema::drop('marks');
+        Schema::drop('car_marks');
     }
 
 }

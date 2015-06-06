@@ -11,20 +11,20 @@ class PageController extends Controller {
 	/**
 	 * Display a homepage.
 	 *
-	 * @return Response
+	 * @return \Illuminate\View\View
 	 */
 	public function index()
 	{
-		return view('page.home')->with(['page' => Page::findByName('homepage')->get()[0]]);
+		return view('page.home')->with(['page' => count(Page::findByName('homepage')->get()) ? Page::findByName('homepage')->get()[0] : null]);
 	}
 	/**
 	 * Display an about page.
 	 *
-	 * @return Response
+	 * @return \Illuminate\View\View
 	 */
 	public function about()
 	{
-		return view('page.about')->with(['page' => Page::findByName('about')->get()[0]]);
+		return view('page.about')->with(['page' => count(Page::findByName('about')->get()) ? Page::findByName('about')->get()[0] : null]);
 	}
 
 

@@ -4,10 +4,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Car extends Model {
 
-    protected $fillable = ['title'];
+    protected $fillable = ['image', 'description', 'enable'];
 
 
-    public function mark()
+   /* public function mark()
     {
         return $this->hasOne('App\CarMark');
     }
@@ -16,11 +16,12 @@ class Car extends Model {
     public function model()
     {
         return $this->hasOne('App\CarModel');
-    }
+    }*/
+
 
     public function options()
     {
-        return $this->hasOne('App\CarOptions');
+        return $this->belongsTo('App\CarOptions', 'car_options_id');
     }
 
 }

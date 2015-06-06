@@ -9,7 +9,7 @@ class CarMark extends Model {
 
     public function models()
     {
-        return $this->hasMany('App\CarModels');
+        return $this->hasMany('App\CarModel');
     }
 
 }

@@ -14,7 +14,7 @@ class CarOptions extends Model {
 
     public function model()
     {
-        return $this->belongsTo('App\CarModel');
+        return $this->belongsTo('App\CarModel', 'car_model_id');
     }
 
 }

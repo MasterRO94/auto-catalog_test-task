@@ -23,6 +23,15 @@ class PageTableSeeder extends Seeder {
         ]);
 
         Page::create([
+            'name' => 'catalog',
+            'title' => 'Каталог',
+            'keywords' => 'Автомобили, машины, каталог, ауди, бмв, порш, хонда, auto, cars, audi, bmw, porsche',
+            'description' => 'Автомобильный каталог. Все автомобили в одном месте. Смотреть автомобили. Просмтр машин.',
+            'h1' => 'Каталог',
+            'body' => '',
+        ]);
+
+        Page::create([
             'name' => 'about',
             'title' => 'О Нас',
             'keywords' => 'Автомобили, машины, каталог, ауди, бмв, порш, хонда, auto, cars, audi, bmw, porsche',

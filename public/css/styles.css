@@ -7,3 +7,38 @@
     height: 120px;
     border: 1px solid #00b3ee;
 }
+
+#catalog_form .col-md-3{
+    padding: 0 30px 0 0;
+}
+
+#catalog_form .car-find a{
+    margin-top: 25px;
+}
+
+.panel-heading h1{
+    margin-top: 10px;
+}
+.content .clearfix:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+article{
+    text-align: justify;
+    text-indent: 30px;
+}
+article.col-md-12{
+    margin-top: 20px;
+}
+
+figure.thumbnail{
+    max-width: 430px;
+    max-height: 300px;
+    margin-right: 20px;
+}
+
+.row .panel-default{
+    margin-top: 15px;
+}

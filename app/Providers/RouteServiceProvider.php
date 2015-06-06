@@ -24,7 +24,17 @@ class RouteServiceProvider extends ServiceProvider {
 	{
 		parent::boot($router);
 
-		//
+		$router->model('mark', 'App\CarMark');
+		$router->model('model', 'App\CarModel');
+
+        $router->bind('mark_slug', function ($slug)
+        {
+            return \App\CarMark::where('slug', $slug)->first();
+        });
+        $router->bind('model_slug', function ($slug)
+        {
+            return \App\CarModel::where('slug', $slug)->first();
+        });
 	}
 
 	/**

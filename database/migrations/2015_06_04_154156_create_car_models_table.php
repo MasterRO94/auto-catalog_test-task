@@ -16,11 +16,14 @@ class CreateCarModelsTable extends Migration {
 		{
             $table->increments('id');
 
-            $table->integer('mark_id')->unsigned();
-            $table->foreign('mark_id')->references('id')->on('car_marks')->onDelete('cascade');
+            $table->integer('car_mark_id')->unsigned();
+            $table->foreign('car_mark_id')->references('id')->on('car_marks')->onDelete('cascade');
 
             $table->string('title');
+            $table->string('slug');
             $table->timestamps();
+
+            $table->unique(['id', 'slug']);
 		});
 	}
 
