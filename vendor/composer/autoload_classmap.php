@@ -27,6 +27,7 @@ return array(
     'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\Request' => $baseDir . '/app/Http/Requests/Request.php',
+    'App\\Http\\Requests\\SavePageRequest' => $baseDir . '/app/Http/Requests/SavePageRequest.php',
     'App\\Page' => $baseDir . '/app/Page.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\BusServiceProvider' => $baseDir . '/app/Providers/BusServiceProvider.php',
