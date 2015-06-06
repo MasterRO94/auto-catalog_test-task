@@ -42,3 +42,16 @@ figure.thumbnail{
 .row .panel-default{
     margin-top: 15px;
 }
+
+
+span.icon{
+    margin-right: 10px;
+}
+
+.edit-form{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.edit-form .col-md-10{
+    margin-bottom: 15px;
+}

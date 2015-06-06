@@ -26,6 +26,7 @@ class RouteServiceProvider extends ServiceProvider {
 
 		$router->model('mark', 'App\CarMark');
 		$router->model('model', 'App\CarModel');
+		$router->model('page', 'App\Page');
 
         $router->bind('mark_slug', function ($slug)
         {

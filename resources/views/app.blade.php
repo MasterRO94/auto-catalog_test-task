@@ -28,6 +28,7 @@
 
             </div>
 
+            @section('navbar')
             <nav class="navbar navbar-default" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -51,6 +52,7 @@
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
+            @show
 
         </header>
     @show

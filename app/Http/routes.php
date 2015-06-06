@@ -43,10 +43,13 @@ Route::group(['prefix' => 'catalog'], function()
 });
 
 Route::get('/auth/login', [
-    'as' => 'auth', 'uses' => 'Admin\AuthController@login'
+    'as' => 'auth_login', 'uses' => 'Admin\AuthController@login'
 ]);
 Route::post('/auth/login', [
-    'as' => 'auth', 'uses' => 'Admin\AuthController@auth'
+    'as' => 'auth_login', 'uses' => 'Admin\AuthController@auth'
+]);
+Route::get('/auth/logout', [
+    'as' => 'auth_logout', 'uses' => 'Admin\AuthController@logout'
 ]);
 
 
@@ -54,10 +57,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 {
 
     Route::get('/', [
-        'as' => 'admin', 'uses' => 'PagesController@index'
+        'as' => 'admin_pages', 'uses' => 'PagesController@index'
     ]);
-    Route::get('/login', [
-        'as' => 'admin', 'uses' => 'PagesController@index'
+    Route::post('/page/{page}/edit', [
+        'as' => 'admin_page_save', 'uses' => 'PagesController@update'
+    ]);
+    Route::get('/page/{page}', [
+        'as' => 'admin_page_edit', 'uses' => 'PagesController@edit'
     ]);
 
 });

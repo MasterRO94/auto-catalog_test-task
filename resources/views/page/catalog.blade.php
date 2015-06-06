@@ -29,7 +29,7 @@
 
 
             @if($page->body)
-                <article class="col-md-12 panel-body">{!! $page->body !!}</article>
+                <article class="col-md-12 panel-body clearfix">{!! $page->body !!}</article>
             @endif
 
         </div>
